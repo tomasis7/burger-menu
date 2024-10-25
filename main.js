@@ -7,6 +7,7 @@ window.addEventListener("DOMContentLoaded", main); // motsvarar defer i html
 function main() {
   console.log("Start of the program");
   button.onclick = changeBackgroundColor;
+  // button.addEventListener('click', changeBackgroundColor);
 
   const color = getRandomColor();
   console.log(color);
