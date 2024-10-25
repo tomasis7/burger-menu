@@ -1,23 +1,26 @@
 window.addEventListener("DOMContentLoaded", main); // motsvarar defer i html
 
-// Här kan vi lägga till några globala variabler.
-// let data = ????;
-
 /** This is the starting point for the program */
 function main() {
-  console.log("Start of the program");
-  button.onclick = changeBackgroundColor;
-  // button.addEventListener('click', changeBackgroundColor);
-
-  const color = getRandomColor();
-  console.log(color);
+  setupEventListeners();
+  // startClock();
+  // fetchUsersFromDatabase()
 }
 
-/** Returns a random color as hex-code */
-function getRandomColor() {
-  return "red";
+/** Register all events for buttons and other ui elements */
+function setupEventListeners() {
+  burgerMenu.onclick = toggleHeaderOpen;
+  zoom.onclick = toggleZoom;
+  // sätt upp fler knappar så dom klickbara.
 }
 
-function changeBackgroundColor() {
-  console.log("Change background....");
+/** Opens the header in fullscreen when clicked */
+function toggleHeaderOpen() {
+  const header = document.getElementById("header");
+  header.classList.toggle("open");
+}
+
+/** Will increase the font size of all content */
+function toggleZoom() {
+  //........
 }
